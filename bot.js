@@ -26,8 +26,10 @@ let siegwardQuotes = [
 let quote = _.sample(siegwardQuotes); ;
 
 function postTweet() {
+    console.log('Siegward just tweeted: ' + quote)
     T.post('statuses/update', { status: quote })
 }
 
-setInterval(postTweet(), 60*60*1000)
+setInterval(postTweet, 60*60*1000)
 
+// postTweet()
