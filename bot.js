@@ -36,5 +36,4 @@ function postTweet() {
     T.post('statuses/update', { status: quote })
 }
 
-setInterval(postTweet, 60*60*1000)
-
+postTweet();
