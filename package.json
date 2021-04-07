@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/andrewmosesdrive/twitterBot#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "lodash": "^4.17.21",
     "twit": "^2.2.11"
   }
