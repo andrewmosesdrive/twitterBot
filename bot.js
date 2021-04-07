@@ -1,4 +1,4 @@
-const config = require('./config');
+require('dotenv').config();
 const twit = require('twit');
 const _ = require('lodash');
 
@@ -23,7 +23,7 @@ let siegwardQuotes = [
     "I'm in quite a pickle indeed.",
 ];
 
-let quote = _.sample(siegwardQuotes); ;
+let quote = _.sample(siegwardQuotes);
 
 function postTweet() {
     console.log('Siegward just tweeted: ' + quote)
@@ -32,4 +32,3 @@ function postTweet() {
 
 setInterval(postTweet, 60*60*1000)
 
-// postTweet()
