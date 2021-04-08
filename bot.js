@@ -17,7 +17,7 @@ let siegwardQuotes = [
     "Have you ever walked near a white birch, only to be struck by a great arrow?",
     "I've got to use my head. And think.",
     "Don't disappear like that. You had me downright worried.",
-    "Thanks to you, an epiphany has struck me sqaure in the head.",
+    "Thanks to you, an epiphany has struck me square in the head.",
     "I've unravelled the riddle of this inscrutable lift!",
     "I'm not exactly sure what happened.",
     "Now, now, think twice before you go down that road.",
