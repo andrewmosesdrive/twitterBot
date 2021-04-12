@@ -27,6 +27,11 @@ let siegwardQuotes = [
     "Well, I'm going to have myself a little nap. The only thing to do, really, after a nice toast.",
     "I'm loathe to admit it, but I've been had.",
     "I'm in quite a pickle indeed.",
+    "On some days, I begin to doubt myself.",
+    "I'm no coward, and I've a steady hand, but that thing makes my skin crawl.",
+    "Long may the Sun shine!",
+    "Great planning begets great fortune. An old tenet of the Knights of Catarina.",
+    
 ];
 
 let quote = _.sample(siegwardQuotes);
