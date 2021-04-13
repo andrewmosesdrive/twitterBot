@@ -31,7 +31,7 @@ let siegwardQuotes = [
     "I'm no coward, and I've a steady hand, but that thing makes my skin crawl.",
     "Long may the Sun shine!",
     "Great planning begets great fortune. An old tenet of the Knights of Catarina.",
-    
+
 ];
 
 let quote = _.sample(siegwardQuotes);
@@ -42,3 +42,33 @@ function postTweet() {
 }
 
 postTweet();
+
+function retweet() {
+    let params = {
+        q: '#darksouls',
+        result_type: 'recent',
+        lang: 'en'
+    }
+
+    T.get('search/tweets', params, (err, data) => {
+        if(!err) {
+            let retweeId = data.statuses[0].id_str;
+
+            T.post('statuses/retweet:id', {
+                id: retweeId
+            }, (err, response) => {
+                if(response){
+                    console.log('Retweeted!');
+                }
+
+                if(err) {
+                    console.log('You hecked up clown! Retweet failed!')
+                }
+            })
+        } else {
+            console.log('Something went wrong while searching!')
+        }
+    })
+}
+
+retweet();
