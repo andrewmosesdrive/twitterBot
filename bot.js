@@ -39,11 +39,7 @@ let quote = _.sample(siegwardQuotes);
 function postTweet() {
     console.log('Siegward just tweeted: ' + quote)
     T.post('statuses/update', { status: quote })
-}
 
-postTweet();
-
-function retweet() {
     let params = {
         q: '#darksouls',
         result_type: 'recent',
@@ -71,4 +67,6 @@ function retweet() {
     })
 }
 
-retweet();
+postTweet();
+
+
