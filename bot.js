@@ -39,32 +39,6 @@ let quote = _.sample(siegwardQuotes);
 function postTweet() {
     console.log('Siegward just tweeted: ' + quote)
     T.post('statuses/update', { status: quote })
-
-    let params = {
-        q: '#darksouls',
-        result_type: 'recent',
-        lang: 'en'
-    }
-
-    T.get('search/tweets', params, (err, data) => {
-        if(!err) {
-            let retweeId = data.statuses[0].id_str;
-
-            T.post('statuses/retweet:id', {
-                id: retweeId
-            }, (err, response) => {
-                if(response){
-                    console.log('Retweeted!');
-                }
-
-                if(err) {
-                    console.log('You hecked up clown! Retweet failed!')
-                }
-            })
-        } else {
-            console.log('Something went wrong while searching!')
-        }
-    })
 }
 
 postTweet();
