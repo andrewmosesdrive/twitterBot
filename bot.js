@@ -31,7 +31,7 @@ let siegwardQuotes = [
     "I'm no coward, and I've a steady hand, but that thing makes my skin crawl.",
     "Long may the Sun shine!",
     "Great planning begets great fortune. An old tenet of the Knights of Catarina.",
-
+    "My liberation requires a key. But the key is outside... Hmm... A riddle for the ages..."
 ];
 
 let quote = _.sample(siegwardQuotes);
