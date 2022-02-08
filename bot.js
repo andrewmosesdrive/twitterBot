@@ -42,37 +42,13 @@ function getTweets() {
     "statuses/user_timeline",
     { user_id: "49189455" },
     (error, data, res) => {
-      const mostRecent = data.shift();
-      const id = mostRecent.id_str;
+      const mostRecentId = data.shift().id_str;
+      const randomId = _.sample(data).id_str;
+      const id = Math.random() < 0.5 ? mostRecentId : randomId;
       const reply = "@_jason_777" + " " + _.sample(responses);
       replyToTweet(id, reply);
-      console.log("reply sent");
     }
   );
 }
 
 getTweets();
-
-// create a tweet, storing the id_str of the tweet we commented on for later reference
-// function tweetRecord(postId) {
-//   T.post(
-//     "statuses/update",
-//     { status: "#gotem " + "#luckyNumber" + postId + " #botLife" },
-//     (err) => {
-//       if (err) {
-//         console.log(err);
-//       }
-//     }
-//   );
-// }
-// check own post to see if we already responded
-// function getRecord() {
-//   T.get("statuses/user_timeline", {
-//     user_id: "1378901520184344576",
-//   })
-//     .catch((err) => console.log(err))
-//     .then((result) => {
-//       // get lucky number from most recent tweet
-//       console.log(result.data[1].text);
-//     });
-// }
